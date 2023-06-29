@@ -19,30 +19,31 @@ When applications grow, sharing state and its changes can become very hard. Ques
 With Redux, state is shared using global stores, and changes are predictable: actions are applied by reducers to the state. While the pattern can be a bit much for small projects, the clear separation of responsibilities and predictability helps with bigger applications.
 
 ## Content
+
 The boilerplate contains a clear directory layout to provide a base architecture for your application with some essential dependencies:
 
-React Native (v0.71.4) application (in "ejected" mode to allow using dependencies that rely on native code)
-Redux (v^8.0.5) to help manage state
-Redux Toolkit (Query) (v^1.9.3) to improve redux api calls
-Redux Persist (v^6.0.0) to persist the Redux state
-React Native mmkv (v^2.6.2) which is an efficient, small mobile key-value storage
-React Navigation (v^6.1.6) to handle routing and navigation in the app, with a splash screen setup by default
-React I18Next (v^12.2.0) to handle internationalization in your app
-prettier and eslint preconfigured for React Native
-react-native-flipper (v^0.182.0) to debug react-native, 
-redux-flipper (v^2.0.2) to debug redux, 
-navigation devtool (v^6.0.18) to debug navigation
+-   React Native (v0.71.4) application (in "ejected" mode to allow using dependencies that rely on native code)
+-   Redux (v^8.0.5) to help manage state
+-   Redux Toolkit (Query) (v^1.9.3) to improve redux api calls
+-   Redux Persist (v^6.0.0) to persist the Redux state
+-   React Native mmkv (v^2.6.2) which is an efficient, small mobile key-value storage
+-   React Navigation (v^6.1.6) to handle routing and navigation in the app, with a splash screen setup by default
+-   React I18Next (v^12.2.0) to handle internationalization in your app
+-   prettier and eslint preconfigured for React Native
+-   react-native-flipper (v^0.182.0) to debug react-native, 
+-   redux-flipper (v^2.0.2) to debug redux, 
+-   navigation devtool (v^6.0.18) to debug navigation
 
 ## Directory Layout
 
-src/components: presentational components
-src/hooks: hooks of the app, you will have the useTheme hook to access the theme
-src/navigators: react navigation navigators
-src/screens: container components, i.e. the application's screens
-src/services: application services, e.g. API clients
-src/stores: redux actions, reducers and stores
-src/theme: base styles for the application
-src/translations: application strings, you can add languages files and be able to translate your app strings
+-   src/components: presentational components
+-   src/hooks: hooks of the app, you will have the useTheme hook to access the theme
+-   src/navigators: react navigation navigators
+-   src/screens: container components, i.e. the application's screens
+-   src/services: application services, e.g. API clients
+-   src/stores: redux actions, reducers and stores
+-   src/theme: base styles for the application
+-   src/translations: application strings, you can add languages files and be able to translate your app strings
 
 ## Getting Started
 
