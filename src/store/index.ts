@@ -1,5 +1,7 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
+import message from './message'
+import auth from "../store/auth/index"
 import {
   persistReducer,
   persistStore,
@@ -17,8 +19,10 @@ import { api } from '../services/api';
 import theme from './theme';
 
 const reducers = combineReducers({
-  theme,
-  [api.reducerPath]: api.reducer,
+  theme: theme,
+  auth: auth,
+  api: api.reducer,
+  message: message,
 });
 
 const storage = new MMKV();
