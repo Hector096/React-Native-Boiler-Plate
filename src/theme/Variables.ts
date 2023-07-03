@@ -12,13 +12,13 @@ import { ThemeNavigationColors } from '../../@types/theme';
  */
 export const Colors = {
   transparent: 'rgba(0,0,0,0)',
-  inputBackground: '#FFFFFF',
+  inputBackground: '#f3f6f4',
   white: '#ffffff',
   //Typography
   textGray800: '#000000',
   textGray400: '#4D4D4D',
   textGray200: '#A1A1A1',
-  primary: '#E14032',
+  primary: '#128ae5',
   success: '#28a745',
   error: '#dc3545',
   //ComponentColors

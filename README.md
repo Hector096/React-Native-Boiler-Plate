@@ -29,7 +29,8 @@ The boilerplate contains a clear directory layout to provide a base architecture
 -   React Native mmkv (v^2.6.2) which is an efficient, small mobile key-value storage
 -   React Navigation (v^6.1.6) to handle routing and navigation in the app, with a splash screen setup by default
 -   React I18Next (v^12.2.0) to handle internationalization in your app
--   prettier and eslint preconfigured for React Native
+-   Prettier and eslint preconfigured for React Native
+-   Formik (v^2.4.2) & Yup (v^1.2.0) for Form Validation
 -   react-native-flipper (v^0.182.0) to debug react-native, 
 -   redux-flipper (v^2.0.2) to debug redux, 
 -   navigation devtool (v^6.0.18) to debug navigation
@@ -87,12 +88,12 @@ The Theme folder, at the root of project, includes a nice kit for building and m
 
 By default, the boilerplate comes with a default theme and a default dark theme. The default theme is build around the different files at the root of src/Theme, by default:
 
-Common.js
-Fonts.js
-Gutters.js
-Images.js
-Layout.js
-Variables.js
+-   Common.js
+-   Fonts.js
+-   Gutters.js
+-   Images.js
+-   Layout.js
+-   Variables.js
 the default dark theme is located in src/Theme/themes/default_dark.
 
 The Boilerplate Theme system is based on layers overriding.
@@ -100,11 +101,22 @@ In other words, the default theme is the "base theme" of the application. On the
 
 Moreover, if we add a new theme into src/Theme/themes, for example : custom. The theme system will override the default theme classes by the ones of custom theme. If the dark mode is activated, the theme system will try to get a custom_dark directory if exists, and override the theme too.
 
+### Responsiveness with [react-native-size-matters](https://www.npmjs.com/package/react-native-size-matters)
+
+A React-Native utility belt for scaling the size of your apps UI across different sized devices.
+
 ## Splash screen & loading data 💾
 
 In many applications, you need to load data from API before displaying any content. To do that, we built a solid navigation based on a splash screen to load data before the content shows.
 
 In StartupContainer, the init function is where you can create asynchronous tasks like fetching data.
+
+
+## Form Validation with Formik and Yup
+
+Formik is a popular form management library for React applications, and Yup is a powerful validation library that works well with Formik. Together, they provide an effective way to handle form validation in React applications.
+
+Formik simplifies the process of building and managing forms by abstracting away form state management, form submission, and form field interaction. Yup, on the other hand, enables declarative and schema-based validation.
 
 ## Add a lang translation 🌐
 
@@ -114,5 +126,37 @@ All languages files are located in src/Translations/resources. By default, there
 
 Change the language with i18n.changeLanguage('fr')
 
-## Using Flipper 🐛
+
+## Add Support of React-Native-Vector-Icons
+### Available Icons
+
+-   AntDesign by AntFinance (298 icons)
+-   Entypo by Daniel Bruce (v1.0.1 411 icons)
+-   EvilIcons by Alexander Madyankin & Roman Shamin (v1.10.1, 70 icons)
+-   Feather by Cole Bemis & Contributors (v4.28.0, 286 icons)
+-   FontAwesome by Dave Gandy (v4.7.0, 675 icons)
+-   FontAwesome 5 by Fonticons, Inc. (v5.15.3, 1598 (free) 7848 (pro) icons)
+-   Fontisto by Kenan Gündoğan (v3.0.4, 615 icons)
+-   Foundation by ZURB, Inc. (v3.0, 283 icons)
+-   Ionicons by Ionic (v5.0.1, 1227 icons)
+-   MaterialIcons by Google, Inc. (v4.0.0, 1517 icons)
+-   MaterialCommunityIcons by MaterialDesignIcons.com (v6.5.95, 6596 icons)
+-   Octicons by Github, Inc. (v16.3.1, 250 icons)
+-   Zocial by Sam Collins (v1.4.0, 100 icons)
+-   SimpleLineIcons by Sabbir & Contributors (v2.5.5, 189 icons)
+
+
+## Debug Using Flipper 🐛
 Flipper is a debugger for React native and, with a plugin, for redux too. All you have to do is [download](https://fbflipper.com/)Flipper.
+
+
+## Authors
+
+👤 **Vishal Verma**
+
+- GitHub: [@Hector096](https://github.com/Hector096)
+- LinkedIn: [@hector096](https://www.linkedin.com/in/hector096/)
+
+## Show your support
+
+Give a ⭐️ if you like this project!

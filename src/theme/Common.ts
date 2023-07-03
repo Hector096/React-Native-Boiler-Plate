@@ -6,6 +6,7 @@
 import { StyleSheet } from 'react-native';
 import buttonStyles from './components/Buttons';
 import { CommonParams } from '../../@types/theme';
+import { scale } from 'react-native-size-matters';
 
 export default function <C>({ Colors, ...args }: CommonParams<C>) {
   return {
@@ -20,9 +21,9 @@ export default function <C>({ Colors, ...args }: CommonParams<C>) {
       textInput: {
         backgroundColor: Colors.inputBackground,
         color: Colors.textGray400,
-        height: 45,
-        borderRadius: 10,
-        paddingStart: 20,
+        height: scale(35),
+        borderRadius: scale(10),
+        paddingStart: scale(20),
       },
     }),
   };

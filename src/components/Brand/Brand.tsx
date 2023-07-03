@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Image } from 'react-native';
 import { useTheme } from '../../hooks';
+import { scale } from 'react-native-size-matters';
 
 type Props = {
   height?: number | string;
@@ -24,8 +25,8 @@ const Brand = ({ height, width, mode }: Props) => {
 };
 
 Brand.defaultProps = {
-  height: 200,
-  width: 200,
+  height: scale(200),
+  width: scale(200),
   mode: 'contain',
 };
 

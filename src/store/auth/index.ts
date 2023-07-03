@@ -1,11 +1,10 @@
 import { createSlice, createAsyncThunk,PayloadAction } from '@reduxjs/toolkit'
 import { setMessage } from '../message'
-import { Credential } from '../../model/Auth'
 import { Config } from '../../config/index'
 import { api } from '../../services/api'
 import { reduxStorage } from '..'
 import { User } from '../../model/User'
-
+import { Credential } from '../../screens/Auth/Login'
 
 
 export const login = createAsyncThunk(

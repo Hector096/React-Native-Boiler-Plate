@@ -15,6 +15,7 @@ import { useTheme } from '../../hooks';
 import { useLazyFetchOneQuery } from '../../services/modules/users';
 import { changeTheme, ThemeState } from '../../store/theme';
 import i18next from 'i18next';
+import { scale } from 'react-native-size-matters';
 
 const Example = () => {
   const { t } = useTranslation(['example', 'welcome']);
@@ -64,108 +65,8 @@ const Example = () => {
           Layout.alignItemsCenter,
         ]}
       >
-        <View
-          style={[
-            Layout.absolute,
-            {
-              height: 250,
-              width: 250,
-              backgroundColor: isDark ? '#000000' : '#DFDFDF',
-              borderRadius: 140,
-            },
-          ]}
-        />
-        <Image
-          style={[
-            Layout.absolute,
-            {
-              bottom: '-30%',
-              left: 0,
-            },
-          ]}
-          source={Images.sparkles.bottomLeft}
-          resizeMode={'contain'}
-        />
-        <View
-          style={[
-            Layout.absolute,
-            {
-              height: 300,
-              width: 300,
-              transform: [{ translateY: 40 }],
-            },
-          ]}
-        >
-          <Brand height={300} width={300} />
-        </View>
-        <Image
-          style={[
-            Layout.absolute,
-            Layout.fill,
-            {
-              top: 0,
-              left: 0,
-            },
-          ]}
-          source={Images.sparkles.topLeft}
-          resizeMode={'contain'}
-        />
-        <Image
-          style={[
-            Layout.absolute,
-            {
-              top: '-5%',
-              right: 0,
-            },
-          ]}
-          source={Images.sparkles.top}
-          resizeMode={'contain'}
-        />
-        <Image
-          style={[
-            Layout.absolute,
-            {
-              top: '15%',
-              right: 20,
-            },
-          ]}
-          source={Images.sparkles.topRight}
-          resizeMode={'contain'}
-        />
-        <Image
-          style={[
-            Layout.absolute,
-            {
-              bottom: '-10%',
-              right: 0,
-            },
-          ]}
-          source={Images.sparkles.right}
-          resizeMode={'contain'}
-        />
-
-        <Image
-          style={[
-            Layout.absolute,
-            {
-              top: '75%',
-              right: 0,
-            },
-          ]}
-          source={Images.sparkles.bottom}
-          resizeMode={'contain'}
-        />
-        <Image
-          style={[
-            Layout.absolute,
-            {
-              top: '60%',
-              right: 0,
-            },
-          ]}
-          source={Images.sparkles.bottomRight}
-          resizeMode={'contain'}
-        />
+          <Brand height={scale(300)} width={scale(300)} />
+       
       </View>
       <View
         style={[
@@ -188,6 +89,7 @@ const Example = () => {
           </Text>
         </View>
 
+       
         <View
           style={[
             Layout.row,
@@ -219,7 +121,7 @@ const Example = () => {
               style={{ tintColor: isDark ? '#A6A4F0' : '#44427D' }}
             />
           </TouchableOpacity>
-
+  
           <TouchableOpacity
             style={[Common.button.circle, Gutters.regularBMargin]}
             onPress={() =>
