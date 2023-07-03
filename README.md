@@ -150,7 +150,7 @@ Change the language with i18n.changeLanguage('fr')
 Flipper is a debugger for React native and, with a plugin, for redux too. All you have to do is [download](https://fbflipper.com/)Flipper.
 
 
-## Authors
+## Author
 
 👤 **Vishal Verma**
 

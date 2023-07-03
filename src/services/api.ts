@@ -8,6 +8,15 @@ import {
 
 const baseQuery = fetchBaseQuery({
   baseUrl: process.env.API_URL,
+  // prepareHeaders: (headers, { getState  }) => {
+  //   const token = getState().auth?.user?.access
+  //   if (token) {
+  //     headers.set('Authorization', `Bearer ${token}`)
+  //   }
+
+  //   return headers
+  // },
+  
 });
 
 const baseQueryWithInterceptor: BaseQueryFn<

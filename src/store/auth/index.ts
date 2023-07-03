@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk,PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { setMessage } from '../message'
 import { Config } from '../../config/index'
 import { api } from '../../services/api'
@@ -22,6 +22,7 @@ export const login = createAsyncThunk(
       }),
     })
       .then(async response => {
+         // Manage Your Login response
         if (response.status === 200 || 201) {
           let json = await response.json()
           if (json.access) {
@@ -35,49 +36,6 @@ export const login = createAsyncThunk(
           let json = await response.json()
           dispatch(setMessage({ message: json.detail, isError: true }))
           return rejectWithValue
-        }
-      })
-      .catch(error => {
-        const message =
-          (error.response &&
-            error.response.data &&
-            error.response.data.message) ||
-          error.message ||
-          error.toString()
-        dispatch(setMessage({ message: message, isError: true }))
-        return rejectWithValue
-      })
-  },
-)
-
-export const forgetPassword = createAsyncThunk(
-  'auth/forgetPassword',
-  async ({ id }:Credential, { rejectWithValue , dispatch}) => {
-    return fetch(`${Config.API_URL}validate/forgot-password-request/`, {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        username: id,
-      }),
-    })
-      .then(async response => {
-        console.log('RES', response)
-        if (response.status === 200 || response.status === 201) {
-          let json = await response.json()
-          if (json) {
-            dispatch(
-              setMessage({ message: json.message, isError: false }),
-            )
-            return json
-          }
-        } else {
-          let json = await response.json()
-          dispatch(
-            setMessage({ message: json.message, isError: true }),
-          )
         }
       })
       .catch(error => {
